@@ -1,5 +1,8 @@
 <center><h1 style="font-family:courier;">TSBDLife2</h1></center>
 <canvas id="game" width="500" height="500"></canvas>
+<button onclick="sendMail()">USE computer to send email</button>
+<h3>Oh! For the email, just do: who-you-are-sending-to?subject=your-subject&body=your-body</h3>
+<p id="shoot"><</p>
 <script>
     var canvas = document.getElementById('game'),
     context = canvas.getContext('2d');
@@ -14,4 +17,11 @@
             context.drawImage(base_image, 0, 0);
         }
     }
+    function sendMail():
+    {
+        var email = prompt("EmailInfo:", "WhatIjusttoldyouatthetop");
+        if (email != null) {
+            document.getElementById("shoot").innerHTML = window.open(email);
+</script>
+
 
